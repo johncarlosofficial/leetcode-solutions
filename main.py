@@ -1,4 +1,4 @@
-from python.p0141 import ListNode, Solution
+from python.p0141 import ListNode, Solution, Solution2
 
 a = ListNode()
 b = ListNode()
@@ -14,5 +14,5 @@ c.next = d
 d.val = 4
 d.next = b
 
-solution = Solution()
+solution = Solution2()
 print(solution.hasCycle(a))
