@@ -1,4 +1,4 @@
-from python.p0141 import ListNode, Solution, Solution2
+from python.p0206 import ListNode, Solution
 
 a = ListNode()
 b = ListNode()
@@ -12,7 +12,13 @@ b.next = c
 c.val = 3
 c.next = d
 d.val = 4
-d.next = b
 
-solution = Solution2()
-print(solution.hasCycle(a))
+solution = Solution()
+new_head = solution.reverseList(a)
+
+curr_node = new_head
+
+while curr_node:
+  print(curr_node.val, end = " -> ")
+  curr_node = curr_node.next
+print("None")
