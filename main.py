@@ -1,4 +1,4 @@
-from python.p0003 import Solution
+from python.p0643 import Solution
 
 solution = Solution()
-print(solution.lengthOfLongestSubstring("abcabcbb"))
+print(solution.findMaxAverage([1, 12, -5, -6, 50, 3], 4))
