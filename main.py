@@ -1,4 +1,4 @@
-from python.p0643 import Solution
+from python.p0088 import Solution
 
 solution = Solution()
-print(solution.findMaxAverage([1, 12, -5, -6, 50, 3], 4))
+solution.merge([1,2,3,0,0,0], 3, [2,5,6], 3)
