@@ -1,4 +1,4 @@
-from python.p0088 import Solution
+from python.p0027 import Solution
 
 solution = Solution()
-solution.merge([1,2,3,0,0,0], 3, [2,5,6], 3)
+print(solution.removeElement([3,2,2,3], 3))
