@@ -1,4 +1,4 @@
-from python.p0005 import Solution
+from python.p0006 import Solution
 
 solution = Solution()
-print(solution.longestPalindrome("abcbd"))
+print(solution.convert("PAYPALISHIRING", 3))
