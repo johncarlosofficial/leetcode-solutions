@@ -1,4 +1,4 @@
-from python.p0006 import Solution
+from python.p0007 import Solution
 
 solution = Solution()
-print(solution.convert("PAYPALISHIRING", 3))
+print(solution.reverse(-578))
