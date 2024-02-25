@@ -1,8 +1,4 @@
-from python.p0225 import MyStack
+from python.p0682 import Solution
 
-my_stack = MyStack()
-my_stack.push(3)
-my_stack.push(8)
-my_stack.top()
-my_stack.pop()
-my_stack.empty()
+solution = Solution()
+print(solution.calPoints(["5","2","C","D","+"]))
