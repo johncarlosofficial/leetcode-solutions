@@ -1,4 +1,4 @@
-from python.p0682 import Solution
+from python.p0844 import Solution
 
 solution = Solution()
-print(solution.calPoints(["5","2","C","D","+"]))
+print(solution.backspaceCompare("ab#c", "ad#c"))
