@@ -1,17 +1,14 @@
-from python.p0019 import ListNode, Solution
+from python.p0021 import LinkedList, Solution
 
-head = ListNode(1)
-head.next = ListNode(2)
-head.next.next = ListNode(3)
-head.next.next.next = ListNode(4)
-head.next.next.next.next = ListNode(5)
+list1 = LinkedList()
+list1.append([1, 2, 4])
+
+list2 = LinkedList()
+list2.append([1, 3, 4])
 
 solution = Solution()
-new_head = solution.removeNthFromEnd(head, 3)
+new_head = solution.mergeTwoLists(list1.head, list2.head)
 
-# Print the modified linked list
-while new_head:
-  print(new_head.val, end=" -> ")
-  new_head = new_head.next
-
-print("None")
+merged_list = LinkedList()
+merged_list.head = new_head
+merged_list.display()
