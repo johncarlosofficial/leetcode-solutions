@@ -1,15 +1,4 @@
-from python.p0232 import MyQueue
+from python.p0227 import Solution
 
-my_queue = MyQueue()
-my_queue.push(1)
-my_queue.push(2)
-my_queue.push(3)
-my_queue.push(4)
-my_queue.push(5)
-
-my_queue.pop()
-my_queue.pop()
-
-my_queue.peek()
-
-my_queue.empty()
+solution = Solution()
+print(solution.calculate("2 * 3 + 2"))
