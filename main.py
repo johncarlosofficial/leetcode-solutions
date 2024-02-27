@@ -1,14 +1,15 @@
-from python.p0023 import LinkedList, Solution
+from python.p0232 import MyQueue
 
-list1 = LinkedList()
-list1.append([1, 2, 4])
+my_queue = MyQueue()
+my_queue.push(1)
+my_queue.push(2)
+my_queue.push(3)
+my_queue.push(4)
+my_queue.push(5)
 
-list2 = LinkedList()
-list2.append([1, 3, 4])
+my_queue.pop()
+my_queue.pop()
 
-solution = Solution()
-new_head = solution.mergeKLists([list1.head, list2.head])
+my_queue.peek()
 
-merged_list = LinkedList()
-merged_list.head = new_head
-merged_list.display()
+my_queue.empty()
