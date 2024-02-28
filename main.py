@@ -1,4 +1,4 @@
-from python.p0227 import Solution
+from python.p0009 import Solution
 
 solution = Solution()
-print(solution.calculate("2 * 3 + 2"))
+print(solution.isPalindrome(-121))
