@@ -1,4 +1,4 @@
-from python.p0035 import Solution
+from python.p0042 import Solution
 
 solution = Solution()
-print(solution.searchInsert([1, 3, 5, 6], 2))
+print(solution.trap([0,1,0,2,1,0,1,3,2,1,2,1]))
