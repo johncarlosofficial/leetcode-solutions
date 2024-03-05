@@ -1,4 +1,4 @@
-from python.p0014 import Solution
+from python.p0008 import Solution
 
 solution = Solution()
-print(solution.longestCommonPrefix(["ab", "a"]))
+print(solution.myAtoi("words and 987"))
