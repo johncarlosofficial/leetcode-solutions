@@ -1,4 +1,4 @@
-from python.p0073 import Solution
+from python.p0011 import Solution
 
 solution = Solution()
-print(solution.setZeroes([[1,1,1],[1,0,1],[1,1,1]]))
+print(solution.maxArea([1,8,6,2,5,4,8,3,7]))
