@@ -1,4 +1,4 @@
-from python.p0011 import Solution
+from python.p0217 import Solution
 
 solution = Solution()
-print(solution.maxArea([1,8,6,2,5,4,8,3,7]))
+print(solution.containsDuplicate([1,2,3,1]))
