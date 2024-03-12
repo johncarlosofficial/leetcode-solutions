@@ -1,4 +1,15 @@
-from python.p0128 import Solution
+from python.p0155 import MinStack
 
-solution = Solution()
-print(solution.longestConsecutive([100,4,200,1,3,2]))
+solution = MinStack()
+solution.push(1)
+solution.push(-5)
+solution.push(3)
+solution.push(2)
+
+print(solution.getMin())
+solution.pop()
+print(solution.getMin())
+solution.pop()
+print(solution.getMin())
+solution.pop()
+print(solution.getMin())
