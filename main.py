@@ -1,4 +1,5 @@
-from python.p0058 import Solution
+from python.p0150 import Solution
 
 solution = Solution()
-print(solution.lengthOfLastWord("Hello World"))
+
+print(solution.evalRPN(["10","6","9","3","+","-11","*","/","*","17","+","5","+"]))
