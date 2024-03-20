@@ -4,7 +4,10 @@ class Solution:
     if len(s) < 10:
       return 0
 
+    # Set to store encountered sequences
     hash_set = set()
+
+    # Set to store repeated sequences
     ans_set = set()
 
     for i in range(len(s) - 9):
