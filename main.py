@@ -1,8 +1,4 @@
-from python.p2236 import Solution, Tree
-
-tree = Tree()
-tree.insert([5,3,1])
+from python.p0187 import Solution
 
 solution = Solution()
-
-print(solution.checkTree(tree.root))
+print(solution.findRepeatedDnaSequences("AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"))
