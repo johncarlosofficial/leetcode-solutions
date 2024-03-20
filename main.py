@@ -1,5 +1,8 @@
-from python.p0150 import Solution
+from python.p2236 import Solution, Tree
+
+tree = Tree()
+tree.insert([5,3,1])
 
 solution = Solution()
 
-print(solution.evalRPN(["10","6","9","3","+","-11","*","/","*","17","+","5","+"]))
+print(solution.checkTree(tree.root))
