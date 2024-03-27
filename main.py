@@ -1,6 +1,4 @@
-from python.p1823 import Solution
+from python.p0350 import Solution
 
-# Test the code
 solution = Solution()
-print(solution.findTheWinner(5, 2))  # Output: 3
-print(solution.findTheWinner(6, 5))  # Output: 1
+print(solution.intersect([1,2,2,1], [2,2]))
