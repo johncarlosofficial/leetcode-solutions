@@ -1,4 +1,4 @@
-from python.p0387 import Solution
+from python.p0344 import Solution
 
 solution = Solution()
-print(solution.firstUniqChar("loveleetcode"))
+print(solution.reverseString(["h", "e", "l", "l", "o"]))
