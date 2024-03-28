@@ -1,4 +1,9 @@
-from python.p0344 import Solution
+from python.p0295 import MedianFinder
 
-solution = Solution()
-print(solution.reverseString(["h", "e", "l", "l", "o"]))
+# Your MedianFinder object will be instantiated and called as such:
+obj = MedianFinder()
+obj.addNum(1)
+obj.addNum(2)
+print(obj.findMedian())
+obj.addNum(3)
+print(obj.findMedian())
