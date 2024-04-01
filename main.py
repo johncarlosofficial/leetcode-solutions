@@ -1,4 +1,4 @@
-from python.p0219 import Solution
+from python.p0056 import Solution
 
-obj = Solution()
-print(obj.containsNearbyDuplicate([1,2,3,1], 3))
+solution = Solution()
+print(solution.merge([[1,3],[2,6],[8,10],[15,18]]))
