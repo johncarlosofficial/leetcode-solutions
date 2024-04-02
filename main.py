@@ -1,4 +1,4 @@
-from python.p0744 import Solution
+from python.p1351 import Solution
 
 solution = Solution()
-print(solution.nextGreatestLetter(["x", "x", "y", "y"], "z"))
+print(solution.countNegatives([[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]))
