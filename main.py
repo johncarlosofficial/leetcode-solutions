@@ -1,4 +1,4 @@
-from python.p0055 import Solution
+from python.p0045 import Solution
 
 solution = Solution()
-print(solution.canJump([2,3,1,1,4]))
+print(solution.jump([2,3,0,1,4]))
