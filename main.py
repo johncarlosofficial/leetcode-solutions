@@ -1,4 +1,4 @@
-from python.p0034 import Solution
+from python.p0055 import Solution
 
 solution = Solution()
-print(solution.searchRange([5,7,7,8,8,10], 8))
+print(solution.canJump([2,3,1,1,4]))
