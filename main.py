@@ -1,4 +1,4 @@
-from python.p1351 import Solution
+from python.p0034 import Solution
 
 solution = Solution()
-print(solution.countNegatives([[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]))
+print(solution.searchRange([5,7,7,8,8,10], 8))
