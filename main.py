@@ -1,4 +1,4 @@
-from python.p0704 import Solution
+from python.p0744 import Solution
 
 solution = Solution()
-print(solution.search([-1,0,3,5,9,12], 9))
+print(solution.nextGreatestLetter(["x","x","y","y"], "z"))
