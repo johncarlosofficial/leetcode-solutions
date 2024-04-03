@@ -1,4 +1,4 @@
-from python.p0118 import Solution
+from python.p0119 import Solution
 
 solution = Solution()
-print(solution.generate(3))
+print(solution.getRow(3))
