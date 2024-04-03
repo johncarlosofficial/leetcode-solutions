@@ -1,4 +1,4 @@
-from python.p0045 import Solution
+from python.p0118 import Solution
 
 solution = Solution()
-print(solution.jump([2,3,0,1,4]))
+print(solution.generate(3))
