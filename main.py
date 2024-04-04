@@ -1,4 +1,4 @@
-from python.p0134 import Solution
+from python.p0121 import Solution
 
 solution = Solution()
-print(solution.canCompleteCircuit([2,3,4], [3,4,3]))
+print(solution.maxProfit([7,1,5,3,6,4]))
