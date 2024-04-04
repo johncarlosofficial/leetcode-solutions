@@ -1,4 +1,4 @@
-from python.p0122 import Solution
+from python.p0151 import Solution
 
 solution = Solution()
-print(solution.maxProfit([7,1,5,3,6,4]))
+print(solution.reverseWords("a good   example"))
