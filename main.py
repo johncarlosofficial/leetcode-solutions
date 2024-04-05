@@ -1,4 +1,4 @@
-from python.p0080 import Solution
+from python.p0209 import Solution
 
 solution = Solution()
-print(solution.removeDuplicates([0,0,1,1,1,1,2,3,3]))
+print(solution.minSubArrayLen(7, [2,3,1,2,4,3]))
