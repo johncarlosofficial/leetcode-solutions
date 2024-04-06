@@ -1,4 +1,4 @@
-from python.p0209 import Solution
+from python.p0303 import NumArray
 
-solution = Solution()
-print(solution.minSubArrayLen(7, [2,3,1,2,4,3]))
+solution = NumArray([-2,0,3,-5,2,-1])
+print(solution.sumRange(1,4))
