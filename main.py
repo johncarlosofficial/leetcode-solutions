@@ -1,4 +1,4 @@
-from python.p0303 import NumArray
+from python.p0523 import Solution
 
-solution = NumArray([-2,0,3,-5,2,-1])
-print(solution.sumRange(1,4))
+solution = Solution()
+print(solution.checkSubarraySum([23,2,4,6,7], 6))
