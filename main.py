@@ -1,4 +1,4 @@
-from python.p0523 import Solution
+from python.p2660 import Solution
 
 solution = Solution()
-print(solution.checkSubarraySum([23,2,4,6,7], 6))
+print(solution.isWinner([4,10,7,9], [6,5,2,3]))
