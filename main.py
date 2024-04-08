@@ -1,4 +1,4 @@
-from python.p1492 import Solution
+from python.p2405 import Solution
 
 solution = Solution()
-print(solution.kthFactor(12, 3))
+print(solution.partitionString("abacaba"))
