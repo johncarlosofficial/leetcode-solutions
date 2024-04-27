@@ -1,5 +1,5 @@
-from python.p0443 import Solution
+from python.p1657 import Solution
 
 sol = Solution()
 
-print(sol.compress(["a","b","b","c","c","c"]))
+print(sol.closeStrings("uau", "ssx"))
