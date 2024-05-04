@@ -1,5 +1,5 @@
-from python.p0334 import Solution
+from python.p1004 import Solution
 
 sol = Solution()
 
-print(sol.increasingTriplet([1,2,3,4,5]))
+print(sol.longestOnes([0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1], 3))
