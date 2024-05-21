@@ -1,4 +1,4 @@
-from python.p0004 import Solution
+from python.p1071 import Solution
 
-solution = Solution()
-print(solution.findMedianSortedArrays([1,2,3], [4,5,6]))
+sol = Solution()
+print(sol.gcdOfStrings("ABCABC", "ABC"))
