@@ -1,24 +1,23 @@
 from typing import List
 
 
-class Solution: # Time Complexity: O(nˆ2)
+class Solution:
 
   def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
-    if len(temperatures) == 1:
-      return [0]
-
-    ans = []
+    stack = []
+    ans = [0] * len(temperatures)
 
     for i in range(len(temperatures)):
-      warmer = False
-
-      for j in range(i, len(temperatures)):
-        if temperatures[j] > temperatures[i]:
-          ans.append(j - i)
-          warmer = True
-          break
-
-      if not warmer:
-        ans.append(0)
+      if not stack:
+        stack.append([i, temperatures[i]])
+      else:
+        if temperatures[i] <= stack[-1][1]:
+          stack.append([i, temperatures[i]])
+        else:
+          while stack and temperatures[i] > stack[-1][1]:
+            prev_idx = stack[-1][0]
+            ans[prev_idx] = i - prev_idx
+            stack.pop()
+          stack.append([i, temperatures[i]])
 
     return ans
