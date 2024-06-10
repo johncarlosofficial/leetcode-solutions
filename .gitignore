@@ -1,2 +1,5 @@
 *.pyc
 *.sqlite
+.replit
+poetry.lock
+pyproject.toml
