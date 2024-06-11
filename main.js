@@ -1,7 +1,4 @@
-import { twoSum } from "./javascript/p0001.js";
+import { isPalindrome } from "./javascript/p0009.js";
 
-const nums = [2, 7, 11, 15];
-const target = 9;
-const result = twoSum(nums, target);
-
-console.log(result); // Output should be [0, 1]
+const number = 12321;
+console.log(isPalindrome(number));
