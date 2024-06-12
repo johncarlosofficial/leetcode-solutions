@@ -1,4 +1,4 @@
-import { isPalindrome } from "./javascript/p0009.js";
+import { findDuplicate } from "./javascript/p0287.js";
 
-const number = 12321;
-console.log(isPalindrome(number));
+const nums = [1, 2, 3, 1, 4];
+console.log(findDuplicate(nums));
