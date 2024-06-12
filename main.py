@@ -1,5 +1,5 @@
-from python.p0001 import Solution
+from python.p0015 import Solution
 
 sol = Solution()
 
-print(sol.twoSum([3,2,4], 6))
+print(sol.threeSum([-1,0,1,2,-1,-4]))

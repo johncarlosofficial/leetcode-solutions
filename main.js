@@ -1,3 +1,3 @@
-import { twoSum } from "./javascript/p0001.js";
+import { threeSum } from "./javascript/p0015.js";
 
-console.log(twoSum([3, 2, 4], 6));
+console.log(threeSum([-1, 0, 1, 2, -1, -4]));
