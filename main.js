@@ -1,3 +1,3 @@
-import { threeSumClosest } from "./javascript/p0016.js";
+import { fourSumCount } from "./javascript/p0454.js";
 
-console.log(threeSumClosest([-1, 2, 1, -4], 1));
+console.log(fourSumCount([1, 2], [-2, -1], [-1, 2], [0, 2]));

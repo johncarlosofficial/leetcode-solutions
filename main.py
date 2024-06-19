@@ -1,5 +1,10 @@
-from python.p0016 import Solution
+from python.p0454 import Solution
 
-sol = Solution()
+nums1 = [1,2]
+nums2 = [-2,-1]
+nums3 = [-1,2]
+nums4 = [0,2]
 
-print(sol.threeSumClosest([-1,2,1,-4], 1))
+solution = Solution()
+
+print(solution.fourSumCount(nums1, nums2, nums3, nums4))
