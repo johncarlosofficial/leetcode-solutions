@@ -1,3 +1,3 @@
-import { fourSumCount } from "./javascript/p0454.js";
+import { subarraySum } from "./javascript/p0560.js";
 
-console.log(fourSumCount([1, 2], [-2, -1], [-1, 2], [0, 2]));
+console.log(subarraySum([1, 2, 3], 3));
