@@ -1,5 +1,5 @@
-from python.p0560 import Solution
+from python.p0049 import Solution
 
-solution = Solution()
 
-print(solution.subarraySum([1,2,3], 3))
+sol = Solution()
+print(sol.groupAnagrams(["eat","tea","tan","ate","nat","bat"]))

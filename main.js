@@ -1,3 +1,3 @@
-import { subarraySum } from "./javascript/p0560.js";
+import { groupAnagrams } from "./javascript/p0049.js";
 
-console.log(subarraySum([1, 2, 3], 3));
+console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
