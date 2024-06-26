@@ -1,3 +1,3 @@
-import { findDuplicate } from "./javascript/p0287.js";
+import { twoSum } from "./javascript/p0001.js";
 
-console.log(findDuplicate([1, 3, 4, 2, 2]));
+console.log(twoSum([2, 7, 11, 15], 9));

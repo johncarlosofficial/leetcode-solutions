@@ -1,5 +1,5 @@
-from python.p0287 import Solution
+from python.p0001 import Solution
 
 
 sol = Solution()
-print(sol.findDuplicate([1,3,4,2,2]))
+print(sol.twoSum([2,7,11,15], 9))
