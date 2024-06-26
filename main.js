@@ -1,3 +1,3 @@
-import { threeSum } from "./javascript/p0015.js";
+import { findDuplicate } from "./javascript/p0287.js";
 
-console.log(threeSum([-1, 0, 1, 2, -1, -4]));
+console.log(findDuplicate([1, 3, 4, 2, 2]));

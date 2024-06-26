@@ -1,5 +1,5 @@
-from python.p0015 import Solution
+from python.p0287 import Solution
 
 
 sol = Solution()
-print(sol.threeSum([-1, 0, 1, 2, -1, -4]))
+print(sol.findDuplicate([1,3,4,2,2]))
