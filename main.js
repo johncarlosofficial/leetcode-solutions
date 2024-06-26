@@ -1,3 +1,3 @@
-import { groupAnagrams } from "./javascript/p0049.js";
+import { threeSum } from "./javascript/p0015.js";
 
-console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
+console.log(threeSum([-1, 0, 1, 2, -1, -4]));

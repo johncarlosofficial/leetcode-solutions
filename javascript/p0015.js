@@ -3,12 +3,12 @@
  * @return {number[][]}
  */
 export var threeSum = function (nums) {
-  const ans = [];
-  nums.sort((a, b) => a - b);
+  const answer = [];
+  nums.sort((a, b) => a - b); // Sort the array
 
   for (let i = 0; i < nums.length - 2; i++) {
-    // Skip duplicated elements
     if (i > 0 && nums[i] === nums[i - 1]) {
+      // Skip duplicate numbers
       continue;
     }
 
@@ -17,25 +17,22 @@ export var threeSum = function (nums) {
 
     while (left < right) {
       const sum = nums[i] + nums[left] + nums[right];
-      if (sum === 0) {
-        ans.push([nums[i], nums[left], nums[right]]);
 
-        // Move left and right pointers to the next different elements
-        while (left < right && nums[left] === nums[left + 1]) {
-          left++;
-        }
-        while (right > left && nums[right] === nums[right + 1]) {
-          right--;
-        }
+      if (sum === 0) {
+        answer.push([nums[i], nums[left], nums[right]]);
+        // Move left pointer to the right, skipping duplicates
+        while (left < right && nums[left] === nums[left + 1]) left++;
         left++;
+        // Move right pointer to the left, skipping duplicates
+        while (left < right && nums[right] === nums[right - 1]) right--;
         right--;
       } else if (sum < 0) {
-        left++;
+        left++; // Increase the sum by moving the left pointer to the right
       } else {
-        right--;
+        right--; // Decrease the sum by moving the right pointer to the left
       }
     }
   }
 
-  return ans;
+  return answer;
 };

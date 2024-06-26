@@ -1,5 +1,5 @@
-from python.p0049 import Solution
+from python.p0015 import Solution
 
 
 sol = Solution()
-print(sol.groupAnagrams(["eat","tea","tan","ate","nat","bat"]))
+print(sol.threeSum([-1, 0, 1, 2, -1, -4]))
