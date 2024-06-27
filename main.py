@@ -1,5 +1,5 @@
-from python.p0001 import Solution
+from python.p1518 import Solution
 
+solution = Solution()
 
-sol = Solution()
-print(sol.twoSum([2,7,11,15], 9))
+print(solution.numWaterBottles(9, 3))

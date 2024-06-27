@@ -1,3 +1,3 @@
-import { twoSum } from "./javascript/p0001.js";
+import { numWaterBottles } from "./javascript/p1518.js";
 
-console.log(twoSum([2, 7, 11, 15], 9));
+console.log(numWaterBottles(9, 3));
