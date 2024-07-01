@@ -1,3 +1,3 @@
-import { numWaterBottles } from "./javascript/p1518.js";
+import { groupAnagrams } from "./javascript/p0049.js";
 
-console.log(numWaterBottles(9, 3));
+console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));

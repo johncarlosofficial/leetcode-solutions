@@ -1,5 +1,5 @@
-from python.p1518 import Solution
+from python.p0049 import Solution
 
 solution = Solution()
 
-print(solution.numWaterBottles(9, 3))
+print(solution.groupAnagrams(["eat","tea","tan","ate","nat","bat"]))

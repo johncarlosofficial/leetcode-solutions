@@ -1,27 +1,34 @@
 /**
- * @param {string[]} strs
+ * @param {string[]}
  * @return {string[][]}
  */
 export var groupAnagrams = function (strs) {
-  let groups = {};
+  // Initialize an empty object to hold our groups of anagrams.
+  let anagrams = [];
 
-  for (let i = 0; i < strs.length; i++) {
-    let temp = [];
+  // Iterate through each word in the input array.
+  for (let word of strs) {
+    // Create an array of 26 zeros. Each index corresponds to a letter in the alphabet.
+    // For example, index 0 is for 'a', index 1 is for 'b', ..., index 25 is for 'z'.
+    let key = new Array(26).fill(0);
 
-    for (let j = 0; j < strs[i].length; j++) {
-      temp.push(strs[i][j]);
+    for (let char of word) {
+      // Increment the count at the position corresponding to the character.
+      key[char.charCodeAt(0) - "a".charCodeAt(0)] += 1;
     }
 
-    temp.sort();
+    // Convert the count array to a string, so it can be used as a key in the object.
+    let keyString = key.toString();
 
-    temp = temp.join("");
-
-    if (temp in groups) {
-      groups[temp].push(strs[i]);
+    // If the key already exists in the object, append the word to the list.
+    // Otherwise, create a new key with the word in a list.
+    if (keyString in anagrams) {
+      anagrams[keyString].push(word);
     } else {
-      groups[temp] = [strs[i]];
+      anagrams[keyString] = [word];
     }
   }
 
-  return Object.values(groups);
+  // Return the values of the object, which are arrays of anagrams.
+  return Object.values(anagrams);
 };
