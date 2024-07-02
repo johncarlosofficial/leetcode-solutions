@@ -1,5 +1,5 @@
-from python.p0049 import Solution
+from python.p0347 import Solution
 
 solution = Solution()
 
-print(solution.groupAnagrams(["eat","tea","tan","ate","nat","bat"]))
+print(solution.topKFrequent([1,1,1,2,2,3], 2))

@@ -1,3 +1,3 @@
-import { groupAnagrams } from "./javascript/p0049.js";
+import { topKFrequent } from "./javascript/p0347.js";
 
-console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
+console.log(topKFrequent([1, 1, 1, 2, 2, 3], 2));
