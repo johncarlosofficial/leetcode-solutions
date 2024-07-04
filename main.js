@@ -1,3 +1,3 @@
-import { topKFrequent } from "./javascript/p0347.js";
+import { productExceptSelf } from "./javascript/p0238.js";
 
-console.log(topKFrequent([1, 1, 1, 2, 2, 3], 2));
+console.log(productExceptSelf([1, 2, 3, 4]));

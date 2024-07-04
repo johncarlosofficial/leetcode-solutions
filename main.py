@@ -1,5 +1,5 @@
-from python.p0347 import Solution
+from python.p0238 import Solution
 
 solution = Solution()
 
-print(solution.topKFrequent([1,1,1,2,2,3], 2))
+print(solution.productExceptSelf([1,2,3,4]))
