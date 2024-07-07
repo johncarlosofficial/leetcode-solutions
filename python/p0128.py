@@ -1,20 +1,23 @@
+from typing import List
+
 class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        # Create a set from the list
+        hash_set = set(nums)
+        # Initialize max length
+        max_length = 0
 
-  def longestConsecutive(self, nums) -> int:
-    num_set = set(nums)
-    max_length = 0
+        # Iterate through each number in the set
+        for num in hash_set:
+            # Check if it's the start of a sequence
+            if (num - 1) not in hash_set:
+                count = 1
+                # Check for the next numbers in the sequence
+                while (num + 1) in hash_set:
+                    count += 1
+                    num += 1
 
-    for num in num_set:
-      # Check if the current number is the start of a sequence
-      if num - 1 not in num_set:
-        current_num = num
-        current_length = 1
+                # Update max length if current sequence is longer
+                max_length = max(max_length, count)
 
-        # Expand the current sequence to the right
-        while current_num + 1 in num_set:
-          current_num += 1
-          current_length += 1
-
-        max_length = max(max_length, current_length)
-
-    return max_length
+        return max_length
