@@ -1,5 +1,5 @@
-from python.p0125 import Solution
+from python.p0167 import Solution
 
 solution = Solution()
 
-print(solution.isPalindrome("race a car"))
+print(solution.twoSum([2, 7, 11, 15], 9))

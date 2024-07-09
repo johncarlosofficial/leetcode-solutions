@@ -1,3 +1,3 @@
-import { isPalindrome } from "./javascript/p0125.js";
+import { twoSum } from "./javascript/p167.js";
 
-console.log(isPalindrome("race a car"));
+console.log(twoSum([2, 7, 11, 15], 9));
