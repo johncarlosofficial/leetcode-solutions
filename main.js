@@ -1,3 +1,3 @@
-import { longestConsecutive } from "./javascript/p0128.js";
+import { isPalindrome } from "./javascript/p0125.js";
 
-console.log(longestConsecutive([100, 4, 200, 1, 3, 2]));
+console.log(isPalindrome("race a car"));

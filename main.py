@@ -1,5 +1,5 @@
-from python.p0128 import Solution
+from python.p0125 import Solution
 
 solution = Solution()
 
-print(solution.longestConsecutive([100,4,200,1,3,2]))
+print(solution.isPalindrome("race a car"))
