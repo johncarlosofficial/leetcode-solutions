@@ -4,24 +4,19 @@ from typing import List
 class Solution:
 
   def maxArea(self, height: List[int]) -> int:
-    left = 0
-    right = len(height) - 1
+    l, r = 0, len(height) - 1  # Left and right pointers
+    ans = 0  # Maximum area
 
-    if len(height) == 1:
-      return 0
+    while l < r:
+        # Calculate the current water area
+        water = (r - l) * min(height[l], height[r])
+        # Update the maximum area if current is larger
+        ans = max(ans, water)
 
-    max_capacity = 0
+        # Move the pointer with the shorter line inward
+        if height[l] < height[r]:
+            l += 1
+        else:
+            r -= 1
 
-    while left < right:
-      water = (right - left) * min(height[left], height[right])
-      max_capacity = max(max_capacity, water)
-
-      if height[left] < height[right]:
-        left += 1
-      elif height[right] < height[left]:
-        right -= 1
-      else:
-        left += 1
-        right -= 1
-
-    return max_capacity
+    return ans  # Return the maximum area found
