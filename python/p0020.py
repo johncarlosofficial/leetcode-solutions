@@ -1,25 +1,20 @@
 class Solution:
+    def isValid(self, s: str) -> bool:
+        stack = []  # Stack to keep track of opening parentheses
 
-  def isValid(self, s: str) -> bool:
-    stack = []
+        for char in s:
+            if char in "({[":
+                stack.append(char)  # Push opening parentheses onto the stack
+            else:
+                if not stack:
+                    return False  # No matching opening parenthesis
 
-    for char in s:
-      # If the character is an opening bracket, push it onto the stack
-      if (char == '(') or (char == '[') or (char == '{'):
-        stack.append(char)
-      # If the character is a closing bracket
-      else:
-        # Check if the stack is empty or the brackets don't match 
-        if not stack or (char == ')' and stack[-1] != '(') or \
-        (char == ']' and stack[-1] != '[') or \
-        (char == '}' and stack[-1] != '{'):
-          return False
-        else:
-          # Pop the matching opening bracket from the stack
-          stack.pop()
+                last = stack.pop()  # Pop the last opening parenthesis
 
-    # If there are remaining brackets in the stack, the string is invalid
-    if stack:
-      return False
+                # Check for matching parentheses
+                if (char == ")" and last != "(") or \
+                (char == "]" and last != "[") or \
+                (char == "}" and last != "{"):
+                    return False
 
-    return True
+        return not stack  # All parentheses matched
