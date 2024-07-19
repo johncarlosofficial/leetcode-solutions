@@ -1,3 +1,5 @@
-import { isValid } from "./javascript/p0020.js";
+import { evalRPN } from "./javascript/p0150.js";
 
-console.log(isValid("()[]{}"));
+console.log(
+  evalRPN(["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"])
+);
