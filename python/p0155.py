@@ -1,24 +1,31 @@
 class MinStack:
+    def __init__(self):
+        self.stack = []  # Main stack to store elements
+        self.min = []    # Stack to keep track of minimums
 
-  def __init__(self):
-    self.stack = []  # main stack to store elements
-    self.min_stack = []  # stack to store minimum elements
+    def push(self, val: int) -> None:
+        self.stack.append(val)
+        if not self.min or val <= self.min[-1]:
+            self.min.append(val)  # Update min stack
 
-  def push(self, val: int) -> None:
-    self.stack.append(val)
-    if not self.min_stack or val <= self.min_stack[-1]:
-      self.min_stack.append(val)
+    def pop(self) -> None:
+        if self.stack:
+            if self.stack[-1] == self.min[-1]:
+                self.min.pop()  # Remove from min stack if it's the min value
+            self.stack.pop()
 
-  def pop(self) -> None:
-    if self.stack:
-      top_element = self.stack.pop()
-      if top_element == self.min_stack[-1]:
-        self.min_stack.pop()
+    def top(self) -> int:
+        if self.stack:
+            return self.stack[-1]  # Return top element of the main stack
 
-  def top(self) -> int:
-    if self.stack:
-      return self.stack[-1]
+    def getMin(self) -> int:
+        if self.min:
+            return self.min[-1]  # Return the current minimum
 
-  def getMin(self) -> int:
-    if self.min_stack:
-      return self.min_stack[-1]
+
+# Example usage:
+# obj = MinStack()
+# obj.push(val)
+# obj.pop()
+# param_3 = obj.top()
+# param_4 = obj.getMin()
