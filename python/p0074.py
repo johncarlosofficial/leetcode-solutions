@@ -1,43 +1,38 @@
-from typing import List
-
-
+from typing import List  
 class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        top = 0
+        bottom = len(matrix) - 1
 
-  def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-    top = 0
-    bottom = len(matrix) - 1
+        # Binary search to find the correct row
+        while top < bottom:
+            mid = (top + bottom) // 2
 
-    while top < bottom:
-      middle = (top + bottom) // 2
+            if matrix[mid][0] == target:
+                return True
 
-      if matrix[middle][0] == target:
-        return True
+            elif matrix[mid][0] < target:
+                if matrix[mid][-1] >= target:
+                    top = mid
+                    bottom = mid
+                else:
+                    top = mid + 1
+            else:
+                bottom = mid - 1
 
-      elif matrix[middle][0] > target:
-        bottom = middle - 1
+        # Binary search within the row to find the target
+        left = 0
+        right = len(matrix[top]) - 1
 
-      elif matrix[middle][-1] < target:
-        top = middle + 1
+        while left <= right:
+            mid = (left + right) // 2
 
-      else:
-        top = middle
-        bottom = middle
+            if matrix[top][mid] == target:
+                return True
+            
+            elif matrix[top][mid] < target:
+                left = mid + 1
+            else:
+                right = mid - 1
 
-    print(top)
-
-    left = 0
-    right = len(matrix[top]) - 1
-
-    while left <= right:
-      middle = (left + right) // 2
-
-      if matrix[top][middle] == target:
-        return True
-
-      elif matrix[top][middle] > target:
-        right = middle - 1
-
-      else:
-        left = middle + 1
-
-    return False
+        return False  # Return False if the target is not found
