@@ -23,3 +23,16 @@ solution = Solution()
 # Test the isPowerOfTwo method with the value 8 and print the result.
 # Since 8 is 2^3, the function should return True.
 print(solution.isPowerOfTwo(8))
+
+class Solution2:
+    def isPowerOfTwo(self, n: int) -> bool:
+        # A number n is a power of two if and only if it is greater than 0
+        # and has exactly one bit set in its binary representation.
+        return n > 0 and (n & (n - 1)) == 0
+
+# Create an instance of the Solution2 class.
+solution2 = Solution2()
+
+# Test the isPowerOfTwo method with the value 8 and print the result.
+# Since 8 is 2^3, the function should return True.
+print(solution2.isPowerOfTwo(8))

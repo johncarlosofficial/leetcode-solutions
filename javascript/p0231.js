@@ -21,3 +21,18 @@ var isPowerOfTwo = function (n) {
     }
   }
 };
+
+console.log(isPowerOfTwo(16)); // true
+
+/**
+ * Function to check if a number is a power of two.
+ * @param {number} n - The number to check.
+ * @return {boolean} - Returns true if n is a power of two, otherwise false.
+ */
+var isPowerOfTwo2 = function (n) {
+  // A number n is a power of two if and only if it is greater than 0
+  // and has exactly one bit set in its binary representation.
+  return n > 0 && (n & (n - 1)) === 0;
+};
+
+console.log(isPowerOfTwo2(16)); // true
