@@ -1,26 +1,30 @@
-from typing import List
-
-
 class Solution:
+    def jump(self, nums: List[int]) -> int:
+        # 'jumps' will store the minimum number of jumps required to reach the last index
+        jumps = 0
 
-  def jump(self, nums: List[int]) -> int:
-    jumps = 0
-    left, right = 0, 0
-    longest = 0
+        # 'current_start' and 'current_end' represent the range of indices we can jump from
+        current_start = 0
+        current_end = 0
 
-    while right < len(nums) - 1:
-      # Iterate over the elements within the current jump range
-      for i in range(left, right + 1):
-        # Maximum jump
-        jump = i + nums[i]
-        longest = max(longest, jump)
+        # We loop until 'current_end' reaches the last index of the array
+        while current_end < len(nums) - 1:
+            # 'farthest_jump' will track the farthest position we can reach within the current jump
+            farthest_jump = 0
 
-      # Update the boundaries for the next jump
-      left = right + 1
-      right = longest
+            # Iterate over all indices from 'current_start' to 'current_end' to find the farthest jump
+            for i in range(current_start, current_end + 1):
+                # Update the farthest position we can reach from the current position 'i'
+                farthest_jump = max(farthest_jump, nums[i] + i)
 
-      # Increment the number of jumps
-      jumps += 1
+            # Increase the number of jumps as we are moving to a new range
+            jumps += 1
 
-    # Return the total number of jumps required to reach the end
-    return jumps
+            # Move 'current_start' to the next range (just beyond the current end)
+            current_start = current_end + 1
+
+            # Update 'current_end' to the farthest position we can jump to
+            current_end = farthest_jump
+
+        # Return the total number of jumps required
+        return jumps
