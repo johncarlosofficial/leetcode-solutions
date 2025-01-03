@@ -50,3 +50,42 @@ class Solution:
         # 1. Recursive stack depth for factorial computation is O(max(rows, cols)).
         # 2. Memoization dictionary stores at most total_moves, down_moves, and right_moves factorials.
         # 3. Total space complexity: O(rows + cols).
+
+class Solution2:
+    def uniquePaths(self, rows: int, cols: int) -> int:
+        # Total moves required: (rows - 1) down moves + (cols - 1) right moves
+        total_moves = rows + cols - 2
+
+        # Down moves and right moves needed
+        down_moves = rows - 1
+        right_moves = cols - 1
+
+        # Variables to compute the combination formula C(total_moves, down_moves)
+        numerator = 1  # To store (total_moves)!
+        denominator = 1  # To store (down_moves)! * (right_moves)!
+
+        for i in range(1, total_moves + 1):
+            # Calculate factorial of total_moves
+            numerator *= i
+            
+            # Update denominator with factorial of down_moves and right_moves
+            if i == down_moves:
+                denominator *= numerator  # Multiply by down_moves!
+            if i == right_moves:
+                denominator *= numerator  # Multiply by right_moves!
+
+            # Break early once we reach total_moves
+            if i == total_moves:
+                break
+        
+        # Return the result of the combination formula
+        return numerator // denominator  # Integer division
+
+        # Time Complexity:
+        # 1. The loop runs from 1 to total_moves, i.e., (rows + cols - 2) iterations.
+        # 2. Therefore, the time complexity is O(rows + cols).
+
+        # Space Complexity:
+        # 1. Constant space is used for variables like numerator and denominator.
+        # 2. No recursion or additional data structures are used.
+        # 3. Therefore, the space complexity is O(1).
